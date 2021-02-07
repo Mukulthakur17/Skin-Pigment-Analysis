@@ -1,0 +1,151 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+    crossorigin="anonymous"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<link rel="stylesheet" href="{{url_for('static', path='styles.css') }}">
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 sidebar">
+
+
+
+
+            </div>
+            <div class="col-12 col-md-6 workarea">
+                <div class="topbar">
+
+                    <h1>Skin Disease Detection</h1>
+
+
+                    <h3>Diagnosis from image</h3>
+                </div>
+
+                <div class="loading"><img src="/static/load.svg"></div>
+                <div class="bottombar">
+
+                    <label for="image_file">Upload an image:</label>
+                    <input class="btn btn-warning " type="file" id="image_file" name="myfile" accept="image/*" />
+                </div>
+                <div class="bottombarr"><button class="btn btn-success" onclick="predictImage()"> Diagnose </button>
+                </div>
+
+                <div class="information">
+                    <div class="dis-image-div">
+                        <img src='#' alt="img" id="dis-image">
+                    </div>
+                    <h1 id="info-disease"></h1>
+                    <h4>Summary</h4>
+                    <ul id="info-summary"></ul>
+
+                    <h4>Symptoms</h4>
+                    <ul id="info-symptoms"></ul>
+
+                    <h4>Duration</h4>
+                    <p id="info-duration"></p>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="footer bg-dark w-100">
+        <p>Made with &hearts; by Team ElectroCat.</p>
+        <img id='mandi' src="/static/ieee_logo.png" alt="IEEE Mandi">
+
+        <img id='electro' src="/static/electrothon_logo.png" alt="Electrothon">
+
+    </div>
+
+</body>
+
+<script>
+
+    document.getElementById('image_file').onchange = function () {
+        $('.btn-success').css("display", "block")
+    };
+
+    function predictImage() {
+
+        $('.loading').css("display", "block");
+        $('.bottombar, .bottombarr, .btn-success').css("display", "none");
+
+        var files = document.getElementById("image_file").files
+        var formData = new FormData();
+        var endpoint = '/predict';
+        formData.append('image', files[0])
+
+        $.ajax({
+            type: 'POST',
+            url: endpoint,
+            data: formData,
+            contentType: false,
+            cache: false,
+            processData: false,
+            success: function (data) {
+
+                $('.information').css("visibility", "visible")
+
+                $('#info-disease').text(data["Disease"])
+                $("#info-duration").text(data["Duration"])
+
+                var summ = document.getElementById("info-summary")
+                var itr = data["Summary"]
+                if (itr) {
+                    for (var i = 0; i < itr.length; i++) {
+                        var ele = document.createElement("li");
+                        var text = itr[i];
+                        ele.textContent = text
+                        summ.appendChild(ele)
+                    }
+                }
+
+                // for symptoms
+                var symp = document.getElementById("info-symptoms")
+                var itr = data["Symptoms"]
+                if (itr) {
+                    for (var i = 0; i < itr.length; i++) {
+                        var ele = document.createElement("li");
+                        var text = itr[i];
+                        ele.textContent = text
+                        symp.appendChild(ele)
+                    }
+                }
+
+                if (files[0]) {
+                    var reader = new FileReader();
+
+                    reader.onload = function (e) {
+                        $('#dis-image')
+                            .attr('src', e.target.result);
+                    };
+
+                    reader.readAsDataURL(files[0]);
+                }
+
+
+                // swal({
+                //     title: data["Disease"],
+                //     text: data["Summary"],
+                //     icon: "info",
+                // })
+            }
+
+        }).then(() => {
+            $('.loading').css("display", "none");
+
+        });
+
+    }
+
+    function predictAgain() {
+        $('.bottombar, .bottombarr').css("visibility", "visible");
+        document.getElementById('image_file').value = "";
+    }
+</script>

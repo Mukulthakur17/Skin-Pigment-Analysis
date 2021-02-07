@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-y: scroll;
+  margin-bottom: 100px;
+}
+
+h1 {
+  padding: 10px;
+  font-size: 32px;
+  text-align: center;
+  color: black;
+}
+
+h3 {
+  padding: 10px;
+  padding-top: 0;
+  font-size: 20px;
+  text-align: center;
+  color: rgb(87, 85, 85);
+}
+
+.topbar {
+  border-bottom: 1px black solid;
+}
+
+.loading {
+  margin: auto;
+  display: none;
+}
+
+.loading img {
+  display: block;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.row {
+}
+
+.workarea {
+  margin-top: 0;
+  margin-left: 8px;
+}
+
+.bottombar {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  margin-top: 20%;
+}
+
+label {
+  margin: auto;
+}
+
+input {
+  margin: auto;
+}
+
+.bottombarr button {
+  display: none;
+  margin: auto;
+  /* visibility: hidden; */
+  margin-top: 20px;
+}
+
+.information {
+  visibility: hidden;
+  margin-top: 32px;
+  background-color: blanchedalmond;
+  padding: 10px;
+}
+
+.dis-image-div {
+  text-align: center;
+}
+
+.dis-image-div img {
+  width: 200px;
+}
+
+.information h1 {
+  color: rgb(56, 55, 55);
+}
+
+#info-symptoms,
+#info-summary,
+li {
+  padding: 6px;
+  padding-left: 14px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  color: white;
+  font-size: 18px;
+}
+
+.footer p {
+  margin-bottom: 0;
+}
+
+#mandi {
+  width: 75px;
+}
+
+#electro {
+  width: 50px;
+}
