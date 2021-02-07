@@ -1,0 +1,23 @@
+{
+    "Disease": "Contact dermatitis",
+
+    "Summary": 
+        "A skin rash caused by contact with a certain substance. The substance might irritate the skin or trigger an allergic reaction.Some common culprits include soap,cosmetics,fragrances,jewellery and poison ivy. The main symptom is a red rash wherever the skin came into contact with the irritant."
+    ,
+
+    "Duration": "Resolves within days to weeks",
+
+    "Symptoms": [
+
+        "A red rash ",
+
+        "Itching, which may be severe ",
+
+        "Dry, cracked, scaly skin ",
+
+        "Bumps and blisters, sometimes with oozing and crusting ",
+
+        "Swelling, burning or tenderness "
+
+    ]
+}

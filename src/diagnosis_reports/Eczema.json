@@ -1,0 +1,22 @@
+{
+    "Disease": "Eczema",
+    "Summary": [
+        "Eczema or atopic dermatitis is a condition characterized by skin inflammation.",
+        "A person with eczema would have itchy, red and dry skin lesions.",
+        "Genetic inheritance can also be a primary cause of eczema.People with eczema are more prone to develop allergic conditions such as hay fever or asthma."
+    ],
+    "Duration": "  A few weeks if treated immedialy after diagnosis.",
+    "Symptoms": [
+        "Intense itching, especially at night",
+        "Raised bumps over the skin",
+        "Cracked skin",
+        "Development of sensitive skin by scratching ",
+        "Extreme rashes over the skin",
+
+        "Puffy and itchy eyelids",
+
+        "Reddish or dark coloured patches on the skin",
+
+        "Cracked or scaly skin"
+    ]
+}
