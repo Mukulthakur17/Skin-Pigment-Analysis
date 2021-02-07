@@ -33,6 +33,11 @@ cd electrothon
 pip install -r requirements.txt
 ```
 
+### Preparing the model
+
+ - Download the trained model from [here](https://drive.google.com/drive/folders/1ngX9KB--Fon0YmuCgfta6cjeCSamq0g_?usp=sharing "Google Drive").
+ - Move it to the directory "Model Weights _ Json".
+
 ### Starting the uvicorn server
 
 After installing requirements 
