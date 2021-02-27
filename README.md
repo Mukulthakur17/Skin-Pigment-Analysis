@@ -23,7 +23,7 @@ We have trained a Convolutional Neural Network on an extensive training dataset 
 Clone the repository and checkout to stable commit
 
 ```
-git clone https://github.com/cannibalcheeseburger/electrothon.git
+git clone https://github.com/Mukulthakur17/Skin-Pigment-Analysis.git
 cd electrothon
 ```
 
