@@ -1,15 +1,16 @@
 # Skin Disease Detection Using Convolutional Neural Networks
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
+
 <img width ="450" src="./static/electrothon_logo.png">
 
 This is our submission for Electrothon 3.0 as a framework for Skin Disease Detection that analyses the skin pigmentation using Convolutional neural network for diagnosis of skin diseases. Detailed problem statement can be found [here](https://www.notion.so/Organizational-Problem-Statements-ac0bd0cea6a44920ab845dc8f72379b1#ec0c8cacba5846faa9323feecdcd9959).
 
 ## Authors
 
+ - [Mukul Thakur](https://github.com/Mukulthakur17)
  - [Akash Rana](https://github.com/akaxhrana)
  - [Kashish Srivastava](https://github.com/cannibalcheeseburger)
- - [Mukul Thakur](https://github.com/Mukulthakur17)
 
 ## Overview
 
