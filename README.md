@@ -14,8 +14,18 @@ This is our submission for Electrothon 3.0 as a framework for Skin Disease Detec
 
 ## Overview
 
-We have trained a Convolutional Neural Network on an extensive training dataset of images of skin pigmentations and rashes to classify the input as one of the 8 categories of diseases. We achieved 81.68% training accuracy and 75.56% validation accuracy upon training the neural network.
+We have trained a Convolutional Neural Network on an extensive training dataset of images of skin diseases and rashes to classify the input as one of the 8 categories of diseases. We achieved 81.68% training accuracy and 75.56% validation accuracy upon training the neural network.\
+The 8 different catagories of skin diseases that we have selected are:
+- Acne Cystic
+- Eczema
+- Impetigo
+- Psoriasis
+- Rosacea
+- Schamberd
+- Allergic Contact Dermatitis
+- Tinea Ringworm Groin
 
+## Accuracy-Loss Curve
 ![Graph](./img/plot.png)
 
 ## Installation
